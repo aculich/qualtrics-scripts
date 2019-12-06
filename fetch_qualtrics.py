@@ -66,7 +66,7 @@ if debug:
 
 #
 # Create output folder location
-# NOT RUN... 
+# NOT RUN...
 
 #if debug:
 #	print("Attempting to create folder %s" % filepath)
@@ -98,7 +98,7 @@ try:
     apiToken = qualtrics_APIKEY   #os.environ['APIKEY']
 except KeyError:
     print("set environment variable APIKEY")
-    sys.exit(2) 
+    sys.exit(2)
 
 
 #########################################
@@ -117,7 +117,7 @@ headers = {
 ###################################
 data = {
         "format": "csv",
-        "seenUnansweredRecode": -1, 
+        "seenUnansweredRecode": -1,
 	#"startDate": "2019-10-23T07:31:43Z"
 	"startDate": startDate
        }
@@ -130,7 +130,7 @@ try:
 except KeyError:
     print(downloadRequestResponse.json())
     sys.exit(2)
-    
+
 isFile = None
 
 ############################################################################
@@ -195,7 +195,7 @@ print("Created file: ", outfile)
 send_via_email = 0 # still working on this - not yet working
 
 if send_via_email == 0:
-	sys.exit()	
+	sys.exit()
 
 #import email
 import smtplib
@@ -211,7 +211,7 @@ SUBJECT = "LSC Feedback"
 
 themsg = MIMEMultipart()
 themsg['Subject'] = 'LSC Feedback'
-themsg['To'] = TO 
+themsg['To'] = TO
 themsg['From'] = FROM
 
 msg = MIMEBase('application', 'zip')
