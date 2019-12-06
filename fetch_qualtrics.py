@@ -92,8 +92,8 @@ if debug:
 # This allows ANY user to fetch the data for this survey
 # Not just the user with permissions to the qualtrics account
 #
-qualtrics_APIKEY = "ENTER_YOUR_BIG_LONG_KEY"
-qualtrics_surveyId = "ENTER_YOUR_SURVEY_ID"
+qualtrics_APIKEY = os.environ['QUALTRICS_APIKEY']
+qualtrics_surveyId = os.environ['QUALTRICS_SURVEYID']
 
 # Setting Qualtrics parameters
 try:
