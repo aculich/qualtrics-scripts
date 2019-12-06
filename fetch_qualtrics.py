@@ -92,6 +92,11 @@ if debug:
 # This allows ANY user to fetch the data for this survey
 # Not just the user with permissions to the qualtrics account
 #
+
+### In bash run the following in your environment with YOUR keys (not these fake ones)
+# export QUALTRICS_APIKEY='abcdefg0123456789abcdefg0123456789abcdef'
+# export QUALTRICS_SURVEYID='abcdefg0123456789a'
+
 qualtrics_APIKEY = os.environ['QUALTRICS_APIKEY']
 qualtrics_surveyId = os.environ['QUALTRICS_SURVEYID']
 
